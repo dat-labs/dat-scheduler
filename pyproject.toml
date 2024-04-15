@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dat-scheduler"
+version = "0.1.0"
+description = "Will trigger job runs via SDK when their time has come."
+authors = ["Team <team@datlabs.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+croniter = "^2.0.3"
+
+dat-client = {git = "https://github.com/dat-labs/dat-api-sdk", rev = "main", develop = true}
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
