@@ -4,7 +4,7 @@ WORKDIR /repo
 RUN apt-get update && \
     apt-get install -y cron
 
-COPY pyproject.toml .
+COPY . .
 RUN pip install poetry
 
 RUN poetry config virtualenvs.create false && poetry lock && poetry install --no-root
